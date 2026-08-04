@@ -1,8 +1,8 @@
-## Lab 6 - Checkpoint Answers 
-## Registration Number: CIT-24-01-0240 
+# Lab 6 - Checkpoint Answers 
+# Registration Number: CIT-24-01-0240 
 
 
-# Task 1.2 - Pod to Componenet Mapping
+## Task 1.2 - Pod to Componenet Mapping
 
 | Pod name | Component |
 |---|---|
@@ -14,7 +14,7 @@
 | coredns-7d764666f9-66kns | Not in the lecture list - this is the cluster's internal DNS |
 | storage-provisioner | Not in the lecture list - Minikube's storage add-on |
 
-# Checkpoint Q1
+## Checkpoint Q1
 
 The control plane is the part of Kubernetes that makes decisions. It decides what should run and where, but it does not 
 run the actual application containers. It has the API Server (which everything talks to), etcd (stores the cluster's state), 
@@ -22,7 +22,7 @@ the Scheduler (decides which node a Pod goes to), and the Controller Manager (ke
 matches what should be running). A worker node is where the Pods actually run. Each worker node has a kubelet (starts and 
 stops containers), kube-proxy (handles network traffic to Pods), and a container runtime (actually runs the containers).
 
-# Checkpoint Q2
+## Checkpoint Q2
 
 Yes, the IP address changed after I deleted the pod and recreated it from the same manifest. This happened because Pods 
 in Kubernetes are "ephemeral," meaning they are not permanent objects. Deleting a Pod removes it completely, and applying 
