@@ -1,5 +1,5 @@
-# Lab 6 — Kubernetes Fundamentals with Minikube
-# CCS3308 – Virtualization and Containers (Week 7)
+# Lab 6 - Kubernetes Fundamentals with Minikube
+# CCS3308 - Virtualization and Containers (Week 7)
 # Registration Number: CIT-24-01-0240
 
 ## 1. Overview
@@ -64,44 +64,44 @@ lab6/
 
 ## 4. Lab Tasks Completed
 
-## Part 1 – Creating a Pod
+## Part 1 - Creating a Pod
 
 - Created a single Nginx Pod
 - Verified the Pod was running
 - Accessed the application using port forwarding
 
-## Part 2 – Pod Verification
+## Part 2 - Pod Verification
 
 - Verified Pod status
 - Accessed the application through localhost
 - Observed the Nginx welcome page
 
-## Part 3 – Deployment and Self-Healing
+## Part 3 - Deployment and Self-Healing
 
 - Created a Deployment with three replicas
 - Deleted one Pod
 - Observed Kubernetes automatically creating a replacement Pod
 - 
-## Part 4 – Scaling
+## Part 4 - Scaling
 
 - Scaled the Deployment from 3 replicas to 5 replicas
 - Scaled it back down to 2 replicas
 - Observed Kubernetes creating and removing Pods automatically
 
-## Part 5 – Service
+## Part 5 - Service
 
 - Created a NodePort Service
 - Exposed the frontend application
 - Accessed the application using Minikube Service
 
-## Part 6 – Rolling Update and Rollback
+## Part 6 - Rolling Update and Rollback
 
 - Updated the frontend container image
 - Verified rollout completion
 - Rolled back to the previous image version
 - Verified successful rollback
 
-## Part 7 – Multi-Tier Application
+## Part 7 - Multi-Tier Application
 
 Deployed the following application components:
 
@@ -114,7 +114,7 @@ Created Services for each component.
 
 Verified communication between services using a temporary BusyBox debug Pod.
 
-## Part 8 – Persistent Storage
+## Part 8 - Persistent Storage
 
 Configured PostgreSQL with:
 
@@ -124,7 +124,7 @@ Configured PostgreSQL with:
 
 Verified that storage remained attached to the database Pod.
 
-## Part 9 – Troubleshooting
+## Part 9 - Troubleshooting
 
 Created a faulty Pod configuration.
 
