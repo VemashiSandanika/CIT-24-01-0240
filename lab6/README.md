@@ -48,14 +48,17 @@ lab6/
 │   ├── Task5.1.png
 │   ├── Task6.1.png
 │   ├── Task7.1.png
-│   ├── Task7.2.png
+│   ├── Task7.2.1.png
+|   ├── Task7.2.2.png
+|   ├── Task7.2.3.png
 │   ├── Task8.1.png
 │   ├── Task9.1.png
+|   ├── Task9.2.png
+|   ├── Task9.3.png
 │   └── Task10.1.png
 │
 ├── README.md
 └── answers.md
-
 
 
 ## 4. Lab Tasks Completed
