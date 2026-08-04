@@ -2,7 +2,7 @@
 ## Registration Number: CIT-24-01-0240 
 
 
-# Task 1.2 - Pod to Component Mapping
+# Task 1.2 - Pod to Componenet Mapping
 
 | Pod name | Component |
 |---|---|
