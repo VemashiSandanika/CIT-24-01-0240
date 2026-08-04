@@ -26,6 +26,7 @@ This lab introduces the basic concepts and practical usage of Kubernetes. The ob
 
 ## 3. Project Structure
 
+```
 lab6/
 │
 ├── k8s/
@@ -59,7 +60,7 @@ lab6/
 │
 ├── README.md
 └── answers.md
-
+```
 
 ## 4. Lab Tasks Completed
 
