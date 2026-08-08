@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: webapp-redis
+    command: ["redis-server", "--save", "60", "1", "--appendonly", "yes"]
+    volumes:
+      - webapp-redis-data:/data
+    networks:
+      - webapp-net
+    restart: unless-stopped
+  web:
+    build: ./app
+    image: webapp-flask:latest
+    container_name: webapp-web
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=webapp-redis
+      - REDIS_PORT=6379
+    ports:
+      - "5000:5000"
+    networks:
+      - webapp-net
+    restart: unless-stopped
+networks:
+  webapp-net:
+    driver: bridge
+volumes:
+  webapp-redis-data:

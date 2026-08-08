@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docker Assignment - Visit Counter</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 8px;
+      font-size: clamp(24px, 5vw, 36px);
+    }
+    .subtitle {
+      color: #d0d8f0;
+      margin-bottom: 30px;
+      font-size: clamp(14px, 2.2vw, 19px);
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.25);
+      margin: 28px 0;
+      width: min(240px, 45vw);
+    }
+    p {
+      font-size: clamp(15px, 2.4vw, 20px);
+      margin: 0;
+    }
+    .count {
+      font-size: clamp(38px, 9vw, 56px);
+      font-weight: bold;
+      color: #ffd166;
+      margin: 12px 0;
+    }
+    .note {
+      font-size: clamp(13px, 2vw, 16px);
+      color: #c5cde0;
+      margin-top: 24px;
+      line-height: 1.6;
+      max-width: min(480px, 88vw);
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Docker Assignment</h1>
+  <p class="subtitle">This is my first containerized Flask application.</p>
+  <hr class="divider">
+  <p>Page Visits</p>
+  <div class="count">{{ count }}</div>
+  <p class="note">
+    This counter is stored in a Redis database, backed by a persistent
+    Docker volume - so the number keeps counting even if the containers
+    are stopped and restarted.
+  </p>
+</body>
+</html>
