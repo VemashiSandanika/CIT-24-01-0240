@@ -8,7 +8,7 @@ data is kept on a persistent Docker volume, so it survives container restarts.
 # 1. Deployment Requirements
 
 - Docker Engine (v20.10 or later)
-- Docker Compose (v2, optional — only needed if using 'docker-compose.yaml'
+- Docker Compose (v2, optional - only needed if using 'docker-compose.yaml'
   instead of the shell scripts)
 - Bash shell (Linux/Ubuntu)
 - Port 5000 free on the host
