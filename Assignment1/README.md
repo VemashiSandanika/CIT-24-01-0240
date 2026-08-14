@@ -28,11 +28,8 @@ The app is a simple visit counter:
 
 | Resource | Name | Purpose |
 |---|---|---|
-| Docker network | webapp-net (bridge driver) | Lets the 'webapp-web' and 'webapp-redis' 
-containers reach each other by container name, isolated from other Docker networks on the host. |
-| Named volume | webapp-redis-data | Mounted at '/data' inside the Redis container. Stores Redis's 
-append-only file (AOF) and RDB snapshots, so visit counts persist across 'stop-app.sh' / 'start-app.sh' 
-cycles and container recreation. |
+| Docker network | webapp-net (bridge driver) | Lets the 'webapp-web' and 'webapp-redis' containers reach each other by container name, isolated from other Docker networks on the host. |
+| Named volume | webapp-redis-data | Mounted at '/data' inside the Redis container. Stores Redis's append-only file (AOF) and RDB snapshots, so visit counts persist across 'stop-app.sh' / 'start-app.sh' cycles and container recreation. |
 
 # 4. Container Configuration
 
@@ -92,27 +89,27 @@ docker-compose down            # remove containers + network (add -v to also rem
 
 # 7. Example Workflow
 
-## Create application resources
+## 1. Create application resources
 ./prepare-app.sh
 Preparing app ...
 ...
 App prepared successfully.
 
-## Run the application
+## 2. Run the application
 ./start-app.sh
 Running app ...
 ...
 The app is available at http://localhost:5000
 
-## Open a web browser and interact with the application
-## -> visit http://localhost:5000, refresh a few times, watch the counter increase
+## 3. Open a web browser and interact with the application
+visit http://localhost:5000, refresh a few times, watch the counter increase
 
-## Pause the application
+## 4. Pause the application
 ./stop-app.sh
 Stopping app ...
 App stopped. Data preserved in the named volume; run start-app.sh to resume.
 
-## Delete all application resources
+## 5. Delete all application resources
 ./remove-app.sh
 Removing app ...
 Removed app.
