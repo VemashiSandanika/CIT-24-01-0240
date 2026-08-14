@@ -89,27 +89,27 @@ docker-compose down            # remove containers + network (add -v to also rem
 
 # 7. Example Workflow
 
-## 1. Create application resources
+### 1. Create application resources
 ./prepare-app.sh
 Preparing app ...
 ...
 App prepared successfully.
 
-## 2. Run the application
+### 2. Run the application
 ./start-app.sh
 Running app ...
 ...
 The app is available at http://localhost:5000
 
-## 3. Open a web browser and interact with the application
+### 3. Open a web browser and interact with the application
 visit http://localhost:5000, refresh a few times, watch the counter increase
 
-## 4. Pause the application
+### 4. Pause the application
 ./stop-app.sh
 Stopping app ...
 App stopped. Data preserved in the named volume; run start-app.sh to resume.
 
-## 5. Delete all application resources
+### 5. Delete all application resources
 ./remove-app.sh
 Removing app ...
 Removed app.
