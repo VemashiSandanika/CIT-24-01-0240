@@ -44,10 +44,10 @@ pip install eventlet==0.30.2
 
 ## How to Run
 1. Start Ryu in one terminal:
-  ```
+   ```
    source ryuenv38/bin/activate
    ryu-manager --verbose ryu.app.simple_switch_13
-  ```
+   ```
 
 2. In a second terminal, start Mininet with the custom topology, pointed at Ryu:
    ```
@@ -68,10 +68,10 @@ pip install eventlet==0.30.2
    
 ## Summary of Work Completed
 - **Part 1:** Installed Mininet, Open vSwitch, and Ryu natively; resolved several Python-version dependency conflicts.
-- **Part 2:** Built quick topologies with Mininet shortcuts, then wrote a custom Python topology ('chain_topo.py') and
+- **Part 2:** Built quick topologies with Mininet shortcuts, then wrote a custom Python topology ('chain_topo(Part2.2).py') and
   confirmed it fails without a controller attached.
 - **Part 4:** Connected Ryu as the controller and compared controller log activity between a first and second 'pingall'.
 - **Part 5:** Read and wrote OpenFlow rules by hand with 'ovs-ofctl', including a block rule and an ICMP-only allow-list example.
-- **Part 6:** Completed all six practice exercises — baseline connectivity, controller comparison, an original custom topology,
+- **Part 6:** Completed all six practice exercises - baseline connectivity, controller comparison, an original custom topology,
   hand-blocking a specific host pair, simulating and recovering from a link failure, and reading Ryu's 'simple_switch_13.py'
   source code to explain first-packet vs. subsequent-packet behaviour.
