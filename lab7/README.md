@@ -21,7 +21,7 @@ use of the removed 'collections.MutableMapping'). These were resolved by creatin
 environment pinned to Python 3.8, matching what Ryu was actually built against.
 
 ### Recreating the environment
-
+```
 sudo apt-get update
 sudo apt-get install mininet openvswitch-switch openvswitch-testcontroller
 
@@ -35,7 +35,7 @@ source ryuenv38/bin/activate
 pip install "setuptools<58"
 pip install ryu
 pip install eventlet==0.30.2
-
+```
 ## Files
 - topologies/chain_topo(Part2.2).py - example chain topology from Part 2.2 of the lab sheet
 - topologies/my_chain_topo(Part6_Question3).py - original three-switch chain topology built for Exercise 3, using a distinct IP scheme (192.168.1.x/24)
@@ -44,20 +44,28 @@ pip install eventlet==0.30.2
 
 ## How to Run
 1. Start Ryu in one terminal:
+  ```
    source ryuenv38/bin/activate
    ryu-manager --verbose ryu.app.simple_switch_13
+  ```
 
 2. In a second terminal, start Mininet with the custom topology, pointed at Ryu:
+   ```
    sudo mn --custom topologies/my_chain_topo.py --topo mychaintopo \
      --controller=remote,ip=127.0.0.1,port=6633 \
      --switch ovsk,protocols=OpenFlow13
-
-3. At the 'mininet>' prompt, verify connectivity:
-    pingall
+   ```
    
-4. In a third terminal, inspect or modify flow rules:
+4. At the 'mininet>' prompt, verify connectivity:
+   ```
+   pingall
+   ```
+   
+6. In a third terminal, inspect or modify flow rules:
+   ```
    sudo ovs-ofctl -O OpenFlow13 dump-flows s1
-
+   ```
+   
 ## Summary of Work Completed
 - **Part 1:** Installed Mininet, Open vSwitch, and Ryu natively; resolved several Python-version dependency conflicts.
 - **Part 2:** Built quick topologies with Mininet shortcuts, then wrote a custom Python topology ('chain_topo.py') and
