@@ -4,7 +4,7 @@
 
 ## Exercise 1 - Warm-up
 Built '--topo single,3' with Mininet's default controller and ran 'pingall' repeatedly. All runs returned '0% dropped', confirming a healthy baseline network with no controller attached beyond Mininet's own default. <br>
-(screenshots - 6.1.png)
+(screenshot - 6.1.png)
 
 ## Exercise 2 - Swap the Brain
 Rebuilt the same 'single,3' topology, this time attached to 'ryu-manager ryu.app.simple_switch_13' instead of the default controller. Both 'pingall' runs returned '0% dropped (6/6 received)'. <br>
@@ -23,7 +23,7 @@ Verified with 'pingall': only the h1↔h3 pair failed (33% dropped, 4/6 received
 
 ## Exercise 5 - Break a Link on Purpose
 On the same running topology (with the Exercise 4 block rule still active), ran 'link s1 s2 down'. <br> 
-(screenshots - 6.5.png)
+(screenshot - 6.5.png)
 
 **Answer:** With the s1–s2 link down, both h1↔h3 and h2↔h3 stopped working, because that link was the only path connecting switch s1 (where h1 and h2 are) to switch s3 (where h3 is), via s2. The h1↔h2 pair was unaffected, since both hosts connect directly to s1 and never needed the broken link. After running link s1 s2 up, connectivity was restored to its previous state - h2↔h3 worked again, though h1↔h3 remained blocked, since that was a separate rule manually installed in Exercise 4, not something caused by the link failure.
 
