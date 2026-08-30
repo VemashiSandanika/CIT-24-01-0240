@@ -53,7 +53,7 @@ pip install eventlet==0.30.2
      --switch ovsk,protocols=OpenFlow13
 
 3. At the 'mininet>' prompt, verify connectivity:
-   pingall
+    pingall
    
 4. In a third terminal, inspect or modify flow rules:
    sudo ovs-ofctl -O OpenFlow13 dump-flows s1
